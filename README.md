@@ -3,9 +3,8 @@
 This project focuses on predicting customer churn for a fitness club using statistical analysis and machine learning models.  
 The workflow includes **data exploration, feature selection, preprocessing, model training, and evaluation**.
 
----
 
-## 📊 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 - **Chi-Square Test** was used to check associations between categorical variables and churn.
   - Significant predictors: `Near_location`, `Partner`, `Promo_friends`, `Group_visits`
@@ -19,25 +18,22 @@ The workflow includes **data exploration, feature selection, preprocessing, mode
   - `Avg_class_frequency_total`
   - `Avg_class_frequency_current_month`
 
----
 
-## ⚙️ Data Preprocessing
+## Data Preprocessing
 - Dataset split: **train (75%)**, **validation (15%)**, **test (10%)**
 - Outliers were detected but retained (not data errors)
 - **RobustScaler** applied to numerical features to mitigate outlier influence
 
----
 
-## 🤖 Modeling
+## Modeling
 Four supervised learning algorithms were compared:
 1. Logistic Regression  
 2. Random Forest  
 3. Gradient Boosting Classifier  
 4. XGBoost  
 
----
 
-## 📈 Results
+## Results
 
 | Model                     | Accuracy | AUC    |
 |----------------------------|----------|--------|
@@ -49,9 +45,8 @@ Four supervised learning algorithms were compared:
 - **XGBoost** achieved the best trade-off between accuracy and AUC.  
 - Confusion matrices showed a strong balance in detecting churners and non-churners.  
 
----
 
-## 🔑 Feature Importance
+## Feature Importance
 Across models, the most influential variables were:
 - `Avg_class_frequency_current_month`  
 - `Avg_class_frequency_total`  
@@ -62,9 +57,8 @@ Across models, the most influential variables were:
 
 These features provide **clear business insights**: customers with shorter contracts, lower attendance, and shorter lifetime are more likely to churn.
 
----
 
-## 📝 Conclusion
+## Conclusion
 - Customer churn can be effectively predicted with **ML models (XGBoost, Gradient Boosting, RF, Logistic Regression)**.  
 - **XGBoost** showed the strongest performance (AUC > 0.96).  
 - Business recommendations: focus on **longer contracts** and **increasing class attendance** to reduce churn.  
