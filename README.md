@@ -9,8 +9,8 @@ Dataset: [Gym customers features and churn](https://www.kaggle.com/datasets/adri
 ## Exploratory Data Analysis (EDA)
 
 - **Chi-Square Test** was used to check associations between categorical variables and churn.
-  - Significant predictors: `Near_location`, `Partner`, `Promo_friends`, `Group_visits`
-  - Not significant: `Gender`, `Phone` (removed from further analysis)
+  - Significant predictors: `Near_location`, `Partner`, `Promo_friends`, `Group_visits`.
+  - Not significant: `Gender`, `Phone` (removed from further analysis).
 
 - **Entropy & Information Gain** confirmed that the strongest predictors are:
   - `Age`
@@ -22,9 +22,9 @@ Dataset: [Gym customers features and churn](https://www.kaggle.com/datasets/adri
 
 
 ## Data Preprocessing
-- Dataset split: **train (75%)** and **test (15%)**
-- Outliers were detected but retained (not data errors)
-- **RobustScaler** applied to numerical features to mitigate outlier influence
+- Dataset split: **train (75%)** and **test (15%)**.
+- Outliers were detected but retained (not data errors).
+- **RobustScaler** applied to numerical features to mitigate outlier influence.
 
 
 ## Modeling
