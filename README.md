@@ -3,6 +3,8 @@
 This project focuses on predicting customer churn for a fitness club using statistical analysis and machine learning models.  
 The workflow includes **data exploration, feature selection, preprocessing, model training, and evaluation**.
 
+Dataset: [Gym customers features and churn](https://www.kaggle.com/datasets/adrianvinueza/gym-customers-features-and-churn/data)
+
 
 ## Exploratory Data Analysis (EDA)
 
@@ -20,7 +22,7 @@ The workflow includes **data exploration, feature selection, preprocessing, mode
 
 
 ## Data Preprocessing
-- Dataset split: **train (75%)**, **validation (15%)**, **test (10%)**
+- Dataset split: **train (75%)** and **test (15%)**
 - Outliers were detected but retained (not data errors)
 - **RobustScaler** applied to numerical features to mitigate outlier influence
 
@@ -35,15 +37,15 @@ Four supervised learning algorithms were compared:
 
 ## Results
 
-| Model                     | Accuracy | AUC    |
-|----------------------------|----------|--------|
-| Logistic Regression        | 0.90     | 0.9656 |
-| Random Forest              | 0.90     | 0.9598 |
-| Gradient Boosting Classifier | 0.89   | 0.9666 |
-| XGBoost                    | 0.91     | 0.9669 |
+| Model                      | Recall | Weighted F1 | AUC    |
+|-----------------------------|--------|--------------|--------|
+| Logistic Regression         | 0.799  | 0.910        | 0.9665 |
+| Random Forest               | 0.805  | 0.912        | 0.9695 |
+| Gradient Boosting Classifier| 0.598  | 0.866        | 0.9418 |
+| **XGBoost**                 | **0.848** | **0.939** | **0.9791** |
 
-- **XGBoost** achieved the best trade-off between accuracy and AUC.  
-- Confusion matrices showed a strong balance in detecting churners and non-churners.  
+- **XGBoost** achieved the best results, with the highest recall and weighted F1, as well as the highest AUC.  
+- The confusion matrices confirmed a strong balance between correctly identifying churners and non-churners.
 
 
 ## Feature Importance
@@ -55,10 +57,10 @@ Across models, the most influential variables were:
 - `Avg_additional_charges_total`  
 - `Age`  
 
-These features provide **clear business insights**: customers with shorter contracts, lower attendance, and shorter lifetime are more likely to churn.
+In all models, **behavioral factors** are more important than demographic or promotional ones.
 
 
 ## Conclusion
-- Customer churn can be effectively predicted with **ML models (XGBoost, Gradient Boosting, RF, Logistic Regression)**.  
+- Customer churn can be effectively predicted with **ML models (XGBoost, Gradient Boosting, Random Forest, Logistic Regression)**.  
 - **XGBoost** showed the strongest performance (AUC > 0.96).  
-- Business recommendations: focus on **longer contracts** and **increasing class attendance** to reduce churn.  
+- Business recommendations: focus on **longer contracts** and **increasing class attendance** to reduce churn. 
