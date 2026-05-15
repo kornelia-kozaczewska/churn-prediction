@@ -22,7 +22,7 @@ Dataset: [Gym customers features and churn](https://www.kaggle.com/datasets/adri
 
 
 ## Data Preprocessing
-- Dataset split: **train (75%)** and **test (15%)**.
+- Dataset split: **train (85%)** and **test (15%)**.
 - Outliers were detected but retained (not data errors).
 - **RobustScaler** applied to numerical features to mitigate outlier influence.
 
