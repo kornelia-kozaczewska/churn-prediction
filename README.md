@@ -5,6 +5,13 @@ The workflow includes **data exploration, feature selection, preprocessing, mode
 
 Dataset: [Gym customers features and churn](https://www.kaggle.com/datasets/adrianvinueza/gym-customers-features-and-churn/data)
 
+## How to run
+```
+pip install -r requirements.txt
+jupyter notebook churn-prediction.ipynb
+```
+The dataset (`gym_churn_us.csv`) is included in the repository.
+
 
 ## Exploratory Data Analysis (EDA)
 
