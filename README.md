@@ -60,6 +60,13 @@ Across models, the most influential variables were:
 In all models, **behavioral factors** are more important than demographic or promotional ones.
 
 
+## SHAP Analysis
+SHAP (SHapley Additive exPlanations) values were used to explain individual XGBoost predictions - showing both the direction and magnitude of each variable's impact.
+- High class attendance pushes predictions away from churn; low attendance is the clearest signal that a customer may leave.
+- Short remaining contract period (`Month_to_end_contract`) and short customer lifetime (`Lifetime`) also increase churn likelihood.
+- Behavioral variables dominate - demographic and promotional factors play a secondary role.
+
+
 ## Conclusion
 - Customer churn can be effectively predicted with **ML models (XGBoost, Gradient Boosting, Random Forest, Logistic Regression)**.  
 - **XGBoost** showed the strongest performance (AUC > 0.96).  
