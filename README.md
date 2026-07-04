@@ -47,6 +47,8 @@ Four supervised learning algorithms were compared:
 - **XGBoost** achieved the best results, with the highest recall and weighted F1, as well as the highest AUC.  
 - The confusion matrices confirmed a strong balance between correctly identifying churners and non-churners.
 
+![ROC curves](images/roc_curves.png)
+
 
 ## Feature Importance
 Across models, the most influential variables were:
@@ -65,6 +67,8 @@ SHAP (SHapley Additive exPlanations) values were used to explain individual XGBo
 - High class attendance pushes predictions away from churn; low attendance is the clearest signal that a customer may leave.
 - Short remaining contract period (`Month_to_end_contract`) and short customer lifetime (`Lifetime`) also increase churn likelihood.
 - Behavioral variables dominate - demographic and promotional factors play a secondary role.
+
+![SHAP beeswarm plot](images/shap_beeswarm.png)
 
 
 ## Conclusion
