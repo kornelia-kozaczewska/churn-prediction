@@ -3,7 +3,11 @@
 This project focuses on predicting customer churn for a fitness club using statistical analysis and machine learning models.  
 The workflow includes **data exploration, feature selection, preprocessing, model training, and evaluation**.
 
+## Data
+
 Dataset: [Gym customers features and churn](https://www.kaggle.com/datasets/adrianvinueza/gym-customers-features-and-churn/data)
+
+The dataset used in this project comes from Kaggle and is included for reproducibility. Please refer to the original dataset page for the current terms and attribution requirements.
 
 ## How to run
 ```
